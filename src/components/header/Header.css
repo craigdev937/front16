@@ -1,0 +1,180 @@
+.nav-desktop {
+    display: none;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.header__menu a {
+    color: inherit;
+}
+
+.bg-header {
+    background: url("@public/mobile/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100svh;
+    color: var(--white);
+}
+
+.header-hero {
+    margin-top: 12rem;
+}
+
+.header-hero h1 {
+    font-family: var(--font-highlight);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1.125rem 1rem 1rem;
+    border: 2px solid var(--white);
+}
+
+/* MOBILE MENU */
+.toggle-handle {
+    position: relative;
+}
+
+.mobile-toggle {
+    position: absolute;
+    appearance: none;
+    width: 24px;
+    height: 16px;
+    bottom: -5px;
+    right: 0;
+    rotate: 0;
+    z-index: 9999;
+    transition: rotate 0.5s ease;
+    background-image: url("@public/icon-hamburger.svg");
+}
+
+.mobile-toggle:checked {
+    width: 20px;
+    height: 20px;
+    rotate: 180deg;
+    transition: rotate 0.5s ease;
+    background-image: url("@public/icon-close.svg");
+}
+
+.header__menu {
+    position: relative;
+}
+
+/* JAVASCRIPT HANDLE */
+.nav-close {
+    display: none;
+}
+
+.nav-mobile {
+    position: absolute;
+    top: 32px;
+    z-index: 99999;
+}
+
+.nav-mobile ul li {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin-top: 1.75rem;
+    opacity: 1;
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bg-nav {
+    overflow: hidden;
+}
+
+.bg-nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    animation-name: example;
+    animation-duration: 0.3s;
+    background-color: var(--black);
+}
+
+@keyframes example {
+    from {
+        left: 375px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.nav-logo {
+    margin-bottom: 10rem;
+}
+
+/* JAVASCRIPT Handle Closed */
+@media (min-width: 1024px) {
+    .nav-desktop {
+        display: block;
+    }
+
+    .mobile-toggle, 
+    .nav-mobile {
+        display: none;
+    }
+
+    .bg-header {
+        background: url("@public/desktop/image-hero.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .header__menu {
+        padding-top: 3rem;
+    }
+
+    .header__menu nav ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-desktop a {
+        position: relative;
+    }
+
+    .nav-desktop a::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        scale: 0.4;
+    }
+
+    .nav-desktop a:hover::after {
+        background-color: var(--white);
+        scale: 1;
+        transition: scale 0.3s ease-in-out;
+    }
+
+    .header-hero h1 {
+        width: 15ch;
+        font-size: 3.5rem;
+    }
+}
+
+
