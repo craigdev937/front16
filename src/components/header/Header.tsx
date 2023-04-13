@@ -5,7 +5,7 @@ import Logo from "@public/logo.svg";
 export const Header = () => {
     const [mobileNav, setMobileNav] = React.useState(false);
 
-    const btnChecked = 
+    const buttonChecked = 
     (event: React.ChangeEvent<HTMLInputElement>) => {
         event.target.checked ? 
         setMobileNav(true) : 
@@ -15,38 +15,40 @@ export const Header = () => {
     React.useEffect(() => {
         if (mobileNav) {
             document.getElementsByTagName("body")[0]
-                .classList.add("bg-nav");
+                .classList.add("background__nav");
         } else {
             document.getElementsByTagName("body")[0]
-                .classList.remove("bg-nav");
+                .classList.remove("background__nav");
         }
     }, [mobileNav]);
 
     return (
         <React.Fragment>
-            <div className="bg-header">
-                <div className="wrapper">
-                    <div className="header">
-                        <div className="header__menu">
+            <header className="header">
+                <section className="wrapper">
+                    <div>
+                        <aside className="header__menu">
                             <div className="logo">
-                                <img src={Logo} alt="Loop Studios" />
+                                <img 
+                                    alt="Loop Studios" 
+                                    src={Logo} 
+                                />
                             </div>
                             <label 
-                                className="toggle-handle"
+                                className="toggle__handle"
                                 htmlFor="mobile-toggle">
                                     <input 
                                         className="mobile-toggle"
                                         id="mobile-toggle"
                                         type="checkbox" 
                                         name="mobile-toggle"
-                                        onChange={btnChecked}
+                                        onChange={buttonChecked}
                                     />
                             </label>
-                            <nav 
-                                className={mobileNav ? 
+                            <nav className={mobileNav ? 
                                 "nav-mobile" : 
                                 "nav-close"}>
-                                <div className="nav-logo">
+                                <div className="nav__logo">
                                     <img 
                                         src={Logo} 
                                         alt="Loop studios" 
@@ -89,14 +91,19 @@ export const Header = () => {
                                     </li>
                                 </ul>
                             </nav>
-                        </div>
-                        <div className="header-hero">
-                            <h1>Immersive experiences that deliver</h1>
-                        </div>
+                        </aside>
+                        <aside className="header-hero">
+                            <h1>
+                                Immersive experiences that deliver
+                            </h1>
+                        </aside>
                     </div>
-                </div>
-            </div>
+                </section>
+            </header>
         </React.Fragment>
     );
 };
+
+
+
 

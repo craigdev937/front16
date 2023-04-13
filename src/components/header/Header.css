@@ -13,7 +13,7 @@
     color: inherit;
 }
 
-.bg-header {
+.header {
     background: url("@public/mobile/image-hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -36,7 +36,7 @@
 }
 
 /* MOBILE MENU */
-.toggle-handle {
+.toggle__handle {
     position: relative;
 }
 
@@ -95,11 +95,11 @@
     }
 }
 
-.bg-nav {
+.background__nav {
     overflow: hidden;
 }
 
-.bg-nav::after {
+.background__nav::after {
     content: "";
     position: absolute;
     top: 0;
@@ -120,7 +120,7 @@
     }
 }
 
-.nav-logo {
+.nav__logo {
     margin-bottom: 10rem;
 }
 
@@ -129,32 +129,26 @@
     .nav-desktop {
         display: block;
     }
-
     .mobile-toggle, 
     .nav-mobile {
         display: none;
     }
-
-    .bg-header {
+    .header {
         background: url("@public/desktop/image-hero.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
-
     .header__menu {
         padding-top: 3rem;
     }
-
     .header__menu nav ul {
         display: flex;
         gap: 2rem;
     }
-
     .nav-desktop a {
         position: relative;
     }
-
     .nav-desktop a::after {
         position: absolute;
         content: "";
@@ -164,13 +158,11 @@
         left: 0;
         scale: 0.4;
     }
-
     .nav-desktop a:hover::after {
         background-color: var(--white);
         scale: 1;
         transition: scale 0.3s ease-in-out;
     }
-
     .header-hero h1 {
         width: 15ch;
         font-size: 3.5rem;
