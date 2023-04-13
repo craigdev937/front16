@@ -31,7 +31,7 @@ export const dBase: IData[] = [
     },
     {
         id: 3,
-        name: "Soccer Team",
+        name: "Soccer Team VR",
         desktopIMG: deskSoccer,
         mobileIMG: mobileSoccer
     },
@@ -43,7 +43,7 @@ export const dBase: IData[] = [
     },
     {
         id: 5,
-        name: "From Above VR",
+        name: "From Up Above VR",
         desktopIMG: deskAboveVR,
         mobileIMG: mobileAboveVR
     },
@@ -55,13 +55,13 @@ export const dBase: IData[] = [
     },
     {
         id: 7,
-        name: "Curosity",
+        name: "The Curosity",
         desktopIMG: deskCuriosity,
         mobileIMG: mobileCuriosity
     },
     {
         id: 8,
-        name: "Fisheye",
+        name: "Make it Fisheye",
         desktopIMG: deskFisheye,
         mobileIMG: mobileFisheye
     }

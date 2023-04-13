@@ -48,6 +48,8 @@
     width: 9ch;
     z-index: 99;
     color: var(--white);
+    text-transform: uppercase;
+    font-family: var(--font-highlight);
 }
 
 .card__title::before {
